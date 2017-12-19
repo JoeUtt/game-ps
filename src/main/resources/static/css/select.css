@@ -1,0 +1,136 @@
+@media only screen and ( width: 375px ) and ( height:812px ) {
+    .role-title {
+        top: 15% !important;
+    }
+
+    .role-name {
+        top:26.3% !important;
+    }
+
+    .role-xr {
+        margin-top: -10% !important;
+    }
+    .role-ml {
+        margin-top: -10% !important;
+    }
+    .role-xx {
+        margin-top: -10% !important;
+    }
+    .open-btn {
+        top:75% !important;
+    }
+}
+
+@media  screen and ( min-width: 375px ) and ( max-width:479px ) {
+    .role-title {
+        top: 10%;
+    }
+
+    .role-name {
+        top:24%;
+    }
+
+    .role-image {
+        margin-top:0;
+    }
+
+    .role-xr {
+        margin-top: 0;
+    }
+    .role-ml {
+        margin-top: 0;
+    }
+    .role-xx {
+        margin-top: 0;
+    }
+    .open-btn {
+        top:80%;
+    }
+}
+
+
+
+.activity-select{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: url('../images/ep-bg-02.png');
+    repeat: no-repeat;
+    background-attachment:fixed;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-02.png', sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-02.png', sizingMethod='scale');
+    background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.role-title{
+    position: absolute;
+    background-image:url('../images/role-title.png');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 60%;
+    padding-bottom: 15.5%;
+    left: 50%;
+    top: 11%;
+    margin-left: -30%;
+}
+.role-name{
+    position: absolute;
+    /*background-image:url('../images/name-ml.png');*/
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 15%;
+    padding-bottom: 6.5%;
+    left: 50%;
+    top: 25%;
+    margin-left: -8%;
+}
+.role-image{
+    position: absolute;
+    /*background-image:url('../images/big-ml.png');*/
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 45%;
+    padding-bottom: 45%;
+    left: 50%;
+    top: 30%;
+    margin-left: -23%;
+}
+.role-select{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 30%;
+    padding-bottom: 30%;
+    left: 45%;
+    top: 57%;
+}
+.role-xr {
+    background-image: url('../images/xr.png');
+    margin-left: -40%;
+}
+.role-ml {
+    background-image: url('../images/ml.png');
+    margin-left: -10%;
+}
+.role-xx {
+    background-image: url('../images/xx.png');
+    margin-left: 20%;
+}
+.open-btn{
+    position: absolute;
+    background-image:url('../images/ep-button-open.png');
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    width: 54%;
+    padding-bottom: 17.6%;
+    left: 50%;
+    top: 85%;
+    margin-left: -28%;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-cn">
+  <head>
+    <title>EP雅莹-圣诞活动</title>
+    <meta itemprop="name" content="EP雅莹-圣诞活动" />
+    <meta name="keywords" content="EP雅莹-圣诞活动" />
+    <meta name="description" content="EP雅莹-圣诞活动" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel='stylesheet' th:href='@{/css/game.css}' />
+  </head>
+  <body>
+    <div id="game">
+      <canvas id="canvas">您的浏览器版本过低，无法打开游戏。请尝试更换浏览器。</canvas>
+    </div>
+    <!--<div id="describe"></div>-->
+    <div id="music">
+      <div id="play_audio" class="voice voice-stop"></div>
+    </div>
+    <div id="game_end_bg" class="modal_bg">
+
+    </div>
+    <div id="game_end">
+      <img id="txt_end" />
+      <div id="end_point"></div>
+      <img id="txt_lottery" />
+      <div id="end_lottery" />
+      <img id="lottery" />
+      <div id="end"></div>
+      <!--<img id="cry" src="/images/game/cry.png" style="display: none;" />-->
+      <!--<img id="sc" />-->
+      <!--<a id="btn_restart"><img src="/images/game/winprize.png" /></a>-->
+      <!--<a id="btn_end"><img src="/images/game/playagain.png" /></a>-->
+
+      <img id="btn_restart" src="/images/game/winprize.png" />
+      <img id="btn_end"  src="/images/game/playagain.png" />
+
+    </div>
+    <!--<div id="game_btn">-->
+      <!--<a id="btn_restart"><img src="/images/game/winprize.png" /></a>-->
+      <!--<a id="btn_end"><img src="/images/game/playagain.png" /></a>-->
+    <!--</div>-->
+    <div id="items" style="display: none;">
+
+    </div>
+    <!--<form action="/upload_pic.htm" id="page" method="post">-->
+    <!--</form>-->
+    <audio id="audio_start" th:src="@{/music/start.mp3}"></audio>
+    <audio id="audio_bg" th:src="@{/music/bg.mp3}"></audio>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/jquery.cookie.js}"></script>
+    <script th:src="@{/js/game/hidpi-canvas.min.js}"></script>
+    <script type="text/javascript" th:src="@{/js/config.js}"></script>
+    <script th:inline="javascript">
+      if(browser.isWeiXin()) {
+          var token = [[${token}]];
+          $.cookie("token", token);
+          if (!token) {
+              location.href = "/autho.htm";
+          }
+      }
+    </script>
+    <script type="text/javascript" th:src="@{/js/game/common.js}"></script>
+    <script type="text/javascript" th:src="@{/js/game/app.js}"></script>
+  </body>
+</html>

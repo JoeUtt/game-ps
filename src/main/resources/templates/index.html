@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-cn">
+  <head>
+    <title>EP雅莹-圣诞活动</title>
+    <meta itemprop="name" content="EP雅莹-圣诞活动" />
+    <meta name="keywords" content="EP雅莹-圣诞活动" />
+    <meta name="description" content="EP雅莹-圣诞活动" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/config.js}"></script>
+      <script th:src="@{/js/jquery.cookie.js}"></script>
+  </head>
+  <body>
+  <img src="../images/ep-bg-01.gif" width="100%"/>
+
+  <div class="voice voice-play rotate-animate yx-none" onclick="switchVoice(this)"></div>
+  <audio id="activity-bg-audio" muted="true">
+      <source src="../images/auto/hit.wav" type="audio/wav" />
+  </audio>
+  <div class="play-btn zoom-animate" onclick="trunSelect()"></div>
+  <div id="link_area">
+      <img id="link_gamerule" src="/images/gz.png" />
+      <img id="link_prizelist"  src="/images/md.png" style="display: inline;"/>
+  </div>
+  <!--<div class="index-link1"><span>游戏规则</span></div><div class="index-link2"><span>中奖名单</span></div>-->
+  <form action="/select.htm" id="page" method="post"></form>
+
+  </body>
+<script th:inline="javascript">
+    var voiceDom = document.getElementById("activity-bg-audio");
+    $('.activity-main').height($(document).height());
+    function switchVoice (e) {
+        $(e).toggleClass("rotate-animate voice-play voice-stop");
+        playVoice();
+    }
+    function playVoice(){
+        if($('.voice').hasClass("voice-play")){
+            voiceDom.muted = false;
+        }else{
+            voiceDom.muted = true;
+        }
+    }
+    playVoice();
+    function trunSelect(){
+        $("#page").submit();
+    }
+</script>
+</html>

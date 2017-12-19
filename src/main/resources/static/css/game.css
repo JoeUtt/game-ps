@@ -1,0 +1,392 @@
+html, body {
+    width:  100%;
+    height: 100%;
+    margin: 0px;
+    /*background: #ffd742;*/
+}
+canvas { display: block; }
+.wrapper{position: absolute; left: 0; top:0;}
+
+@media screen and ( min-width: 540px ) {
+    #game_end_bg {
+        /*background:#000 !important;*/
+        /*background-image: url('../images/ep-bg-02.png') !important; */
+        width:100% !important;
+        height:100% !important;
+        opacity: 1 !important;
+    }
+    /* #game_end_bg img {
+         width:100% !important;
+         height:690px !important;
+         margin-bottom:34px !important;
+         margin-top:88px !important;
+     }*/
+
+    #game_end {
+        margin-top:8% !important;
+        width:60% !important;
+        height:60% !important;
+        right:1% !important;
+        left:20% !important;
+    }
+
+    #txt_end{
+        width:40% !important;
+        margin-top:20% !important;
+    }
+    #end_point {
+        height:33px !important;
+        top:25% !important;
+        left:25% !important;
+        /* text-align:center !important; */
+    }
+    #end_point img {
+        width:96px !important;
+        height:96px !important;
+        /*margin-right:-44.59px !important;*/
+    }
+
+    #txt_lottery {
+        margin-top: 25% !important;
+        width:40% !important;
+    }
+
+    #lottery{
+        width:60% !important;
+        /*padding-bottom: 20%;*/
+    }
+
+    #btn_restart {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 39%;
+        -webkit-transform: translate(-50%,45%);
+        transform: translate(-50%,65%);
+    }
+
+    #btn_end {
+        width:80%;
+        position: relative;
+        top: 0%;
+        left: 49%;
+        -webkit-transform: translate(-50%,33%);
+        transform: translate(-50%,46%);
+    }
+}
+@media screen and ( min-width: 360px ) and ( max-width:374px ){
+    #game_end_bg {
+        /*background:#000 !important;*/
+        /*background-image: url('../images/ep-bg-02.png') !important; */
+        width:100% !important;
+        height:100% !important;
+        opacity: 1 !important;
+    }
+    /* #game_end_bg img {
+         width:100% !important;
+         height:690px !important;
+         margin-bottom:34px !important;
+         margin-top:88px !important;
+     }*/
+
+    #game_end {
+        margin-top:15% !important;
+    }
+
+    #txt_end{
+        width:40% !important;
+        margin-top:20% !important;
+    }
+    #end_point {
+        height:33px !important;
+        top:25% !important;
+        left:25% !important;
+        /* text-align:center !important; */
+    }
+    #end_point img {
+        width:66px !important;
+        height:66px !important;
+        /*margin-right:-44.59px !important;*/
+    }
+
+    #txt_lottery {
+        margin-top: 25% !important;
+        width:40% !important;
+    }
+
+    #lottery{
+        width:60% !important;
+        /*padding-bottom: 20%;*/
+    }
+
+    #btn_restart {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 39%;
+        -webkit-transform: translate(-50%,45%);
+        transform: translate(-50%,65%);
+    }
+
+    #btn_end {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 49%;
+        -webkit-transform: translate(-50%,33%);
+        transform: translate(-50%,46%);
+    }
+
+}
+@media only screen and ( width: 375px ) and ( height:812px ){
+
+    #game_end_bg {
+        /*background:#000 !important;*/
+        /*background-image: url('../images/ep-bg-02.png') !important; */
+        width:100% !important;
+        height:100% !important;
+        opacity: 1 !important;
+    }
+    /* #game_end_bg img {
+         width:100% !important;
+         height:690px !important;
+         margin-bottom:34px !important;
+         margin-top:88px !important;
+     }*/
+    #txt_end{
+        width:40% !important;
+        margin-top:20% !important;
+    }
+    #end_point {
+        height:33px !important;
+        top:25% !important;
+        left:25% !important;
+        /* text-align:center !important; */
+    }
+    #end_point img {
+        width:66px !important;
+        height:66px !important;
+        /*margin-right:-44.59px !important;*/
+    }
+
+    #txt_lottery {
+        margin-top: 25% !important;
+        width:40% !important;
+    }
+
+    #lottery{
+        width:60% !important;
+        /*padding-bottom: 20%;*/
+    }
+
+    #btn_restart {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 39%;
+        -webkit-transform: translate(-50%,45%);
+        transform: translate(-50%,65%);
+    }
+
+    #btn_end {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 49%;
+        -webkit-transform: translate(-50%,33%);
+        transform: translate(-50%,46%);
+    }
+
+}
+
+@media screen and ( min-width: 375px ) and ( max-width:479px ){
+
+    #game_end_bg {
+        /*background:#000 !important;*/
+        /*background-image: url('../images/ep-bg-02.png') !important; */
+        width:100% !important;
+        height:100% !important;
+        opacity: 1 !important;
+    }
+    /* #game_end_bg img {
+         width:100% !important;
+         height:690px !important;
+         margin-bottom:34px !important;
+         margin-top:88px !important;
+     }*/
+
+    #game_end {
+        margin-top:15% !important;
+    }
+
+    #txt_end{
+        width:40% !important;
+        margin-top:20% !important;
+    }
+    #end_point {
+        height:33px !important;
+        top:25% !important;
+        left:25% !important;
+        /* text-align:center !important; */
+    }
+    #end_point img {
+        width:66px !important;
+        height:66px !important;
+        /*margin-right:-44.59px !important;*/
+    }
+
+    #txt_lottery {
+        margin-top: 25% !important;
+        width:40% !important;
+    }
+
+    #lottery{
+        width:60% !important;
+        /*padding-bottom: 20%;*/
+    }
+
+    #btn_restart {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 39%;
+        -webkit-transform: translate(-50%,45%);
+        transform: translate(-50%,65%);
+    }
+
+    #btn_end {
+        width:80%;
+        position: relative;
+        top: 50%;
+        left: 49%;
+        -webkit-transform: translate(-50%,33%);
+        transform: translate(-50%,46%);
+    }
+
+}
+
+#music{
+    position: absolute;
+    right:5px;
+    top:-10px;
+    width:100%;
+    text-align:right;
+    display:none;
+}
+#music > img{
+    width:15px;
+}
+
+#describe{
+    position: absolute;
+    background-size: contain;
+    width: 15%;
+    padding-bottom: 15%;
+    left: 1%;
+    top: 1%;
+    /*z-index: 5;*/
+    background: url('../images/game/jf-b.png') no-repeat 50%;
+    /*background-image:url('../images/game/jf-b.png') ;*/
+    background-size: contain;
+}
+
+#game_end_bg {
+    background: #000;
+    opacity: 1;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    z-index: 999;
+    background:url('../images/ep-bg-02.png') no-repeat;
+    background-size: cover;
+    display: none;
+}
+#game_end {
+    position: absolute;
+    display: none;
+    left: 5%;
+    right: 5%;
+    top: 0;
+    z-index: 999;
+    text-align:center;
+    /*width:100%;*/
+    padding-bottom: 22%;
+    margin-top:30%;
+    background:url('../images/game/end.png') no-repeat;
+    background-size: contain;
+
+}
+#game_end img {
+    max-width: 95% !important;
+}
+#txt_end{
+    margin-top: 25%;
+    width:40%;
+}
+#end_point img{height:50px;}
+#txt_lottery {
+    margin-top: 15%;
+    width:40%;
+}
+#lottery{
+    width:40%;
+    /*padding-bottom: 20%;*/
+}
+
+#cry{margin:0 auto; width:31.2%;}
+#sc{
+    display: block;
+    margin:1em auto;
+}
+#btn_restart img, #btn_end img{
+    width:38%;
+}
+.number{height:14px;}
+
+.voice{
+    position: absolute;
+    background-size: contain;
+    width: 15%;
+    padding-bottom: 15%;
+    right: -1%;
+    top: 8%;
+    z-index: 9;
+    background: url('../images/game/sy-k.png') no-repeat 50%;
+    background-size: contain;
+}
+.voice-play{
+    background-image:url('../images/game/sy-k.png');
+}
+.voice-stop{
+    background-image:url('../images/game/sy-g.png');
+}
+.rotate-animate{
+    -webkit-animation:voiceIcon 2s infinite linear ;
+    animation:voiceIcon 2s infinite linear ;
+}
+@-webkit-keyframes voiceIcon {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes voiceIcon {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+

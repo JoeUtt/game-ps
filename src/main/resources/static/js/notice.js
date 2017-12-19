@@ -1,0 +1,1 @@
+$('.notice-main').height($(document).height());

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="zh-cn">
+  <head>
+    <title>EP雅莹-圣诞活动</title>
+    <meta itemprop="name" content="EP雅莹-圣诞活动" />
+    <meta name="keywords" content="EP雅莹-圣诞活动" />
+    <meta name="description" content="EP雅莹-圣诞活动" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+      <link rel="stylesheet" th:href="@{/css/select.css}"/>
+    <script th:src="@{/js/jquery.js}"></script>
+    <script th:src="@{/js/config.js}"></script>
+      <script th:src="@{/js/jquery.cookie.js}"></script>
+  </head>
+  <body>
+         <img src="../images/ep-bg-02.png" width="100%"/>
+         <div class="voice voice-play rotate-animate yx-none" onclick="switchVoice(this)"></div>
+         <audio id="activity-bg-audio" muted="true">
+             <source src="../images/auto/hit.wav" type="audio/wav" />
+         </audio>
+         <div class="role-title"></div>
+         <div class="role-name" id="role-name"></div>
+         <div class="role-image" id="role-image"></div>
+         <div class="role-select role-xr" onclick="selectRole('xr')"></div>
+         <div class="role-select role-ml" onclick="selectRole('ml')"></div>
+         <div class="role-select role-xx" onclick="selectRole('xx')"></div>
+
+         <div class="open-btn zoom-animate" onclick="trunGame()"></div>
+         <form action="game.html?role=ml" id="page" method="post"></form>
+  </body>
+<script th:inline="javascript">
+    var voiceDom = document.getElementById("activity-bg-audio");
+    $('.activity-select').height($(document).height());
+    function switchVoice (e) {
+        $(e).toggleClass("rotate-animate voice-play voice-stop");
+        playVoice();
+    }
+    function playVoice(){
+        if($('.voice').hasClass("voice-play")){
+            voiceDom.muted = false;
+        }else{
+            voiceDom.muted = true;
+        }
+    }
+    playVoice();
+    function selectRole(role){
+        if (role === 'xr'){
+            setRole("../images/name-xr.png", "../images/big-xr.png")
+        } else if (role === 'ml'){
+            setRole("../images/name-ml.png", "../images/big-ml.png")
+        } else{
+            setRole("../images/name-xx.png", "../images/big-xx.png")
+        }
+        $("#page").attr("action", "/game.htm?role="+ role);
+    }
+    function setRole(name, image){
+        $("#role-name").css("background-image","url("+ name +")");
+        $("#role-image").css("background-image","url("+ image +")");
+    }
+    selectRole("ml");
+    function trunGame(){
+        $("#page").submit();
+    }
+
+    $(window).ready(function () {
+//        setTimeout(function () {
+//            $('.activity-top').addClass("show-animate");
+//        },500)
+    });
+</script>
+</html>
