@@ -40,7 +40,7 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	//compile 'org.springframework.cloud:spring-cloud-starter-feign'
 //    compile("org.springframework.boot:spring-boot-devtools")
-    compile 'com.qiniu:qiniu-java-sdk:7.1.+'
+//    compile 'com.qiniu:qiniu-java-sdk:7.1.+'
 
     compile 'com.google.code.gson:gson:2.8.1'
     compile 'com.google.guava:guava:21.0'
@@ -48,10 +48,8 @@ dependencies {
 //    compile 'org.apache.commons:commons-codec:1.10'
 //    compile "org.rambler.framework:rambler-infrastructure-common:1.0.0.20170407132709"
 
-    compile files('libs/FaceppSDK.jar')
-
-
     runtime('mysql:mysql-connector-java')
 	//providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+	compile 'com.alibaba:fastjson:1.1.41'
 }

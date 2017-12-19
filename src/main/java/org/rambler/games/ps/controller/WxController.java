@@ -47,7 +47,6 @@ public class WxController {
                 gamePsUserMapper.updateToken(gamePsUserDO.getOpenid(),wxMpOAuth2AccessToken.getAccessToken());
             }
             model.addAttribute("token",wxMpOAuth2AccessToken.getAccessToken());
-            model.addAttribute("appId",wxMpUser.getOpenId());
         } catch (WxErrorException e) {
             e.printStackTrace();
         }catch (Exception e) {

@@ -11,22 +11,29 @@
     <script th:src="@{/js/jquery.js}"></script>
     <script th:src="@{/js/config.js}"></script>
       <script th:src="@{/js/jquery.cookie.js}"></script>
+      <script th:inline="javascript">
+              var isVip = [[${isVip}]];
+              var hasLottery = [[${hasLottery}]];
+              $.cookie("isVip", isVip);
+              $.cookie("hasLottery", hasLottery);
+      </script>
   </head>
   <body>
   <!--<img src="../images/ep-bg-01.gif" width="100%"/>-->
-<div class="activity-main">
+<div class="activity-main"></div>
   <div class="voice voice-play rotate-animate yx-none" onclick="switchVoice(this)"></div>
   <audio id="activity-bg-audio" muted="true">
       <source src="../images/auto/hit.wav" type="audio/wav" />
   </audio>
   <div class="play-btn" onclick="trunSelect()"></div>
-
+  <div class="fp-bags"></div>
+    <div class="link-btn">
       <img id="link_gamerule" src="/images/gz.png" />
       <img id="link_prizelist"  src="/images/md.png" style="display: inline;"/>
-
+    </div>
   <!--<div class="index-link1"><span>游戏规则</span></div><div class="index-link2"><span>中奖名单</span></div>-->
   <form action="/select.htm" id="page" method="post"></form>
-</div>
+
   </body>
 <script th:inline="javascript">
     var voiceDom = document.getElementById("activity-bg-audio");

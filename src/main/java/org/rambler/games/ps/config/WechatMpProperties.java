@@ -3,7 +3,6 @@ package org.rambler.games.ps.config;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 
@@ -39,6 +38,9 @@ public class WechatMpProperties {
 
     @Value("${wx.wxCallbackUrl:''}")
     private String wxCallbackUrl;
+
+    @Value("${wx.epAuthUrl:''}")
+    private String epAuthUrl;
 
     public String getAppId() {
         return this.appId;
@@ -86,6 +88,14 @@ public class WechatMpProperties {
 
     public void setWxCallbackUrl(String wxCallbackUrl) {
         this.wxCallbackUrl = wxCallbackUrl;
+    }
+
+    public String getEpAuthUrl() {
+        return epAuthUrl;
+    }
+
+    public void setEpAuthUrl(String epAuthUrl) {
+        this.epAuthUrl = epAuthUrl;
     }
 
     @Override

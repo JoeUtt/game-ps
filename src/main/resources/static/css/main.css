@@ -3,71 +3,82 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 html{width:100%;margin:0 auto;font-size:16px;}
 html,button,input,select,textarea {font-family:'hiraginosansgb w3','Helvetica Neue',Helvetica,'microsoft yahei',Arial,sans-serif}
 body{min-width:320px; -webkit-text-size-adjust:100%;text-size-adjust:100%;margin:0 auto;background:#f0f0f0;/* background:#f3f3f3*/}
+/*@media  screen and ( min-width: 375px ) and ( max-width:410px ){*/
+    /*.play-btn {*/
+        /*bottom:40% !important;*/
+    /*}*/
+
+    /*#link_gamerule {*/
+        /*width:20% !important;*/
+        /*position: relative !important;*/
+        /*left: 38% !important;*/
+        /*-webkit-transform: translate(-50%,45%) !important;*/
+        /*transform: translate(-50%,1127%) !important;*/
+    /*}*/
+
+    /*#link_prizelist {*/
+        /*width:20% !important;*/
+        /*position: relative !important;*/
+        /*left: 42% !important;*/
+        /*-webkit-transform: translate(-50%,45%) !important;*/
+        /*transform: translate(-50%,1095%) !important;*/
+    /*}*/
+/*}*/
 @media  screen and ( min-width: 375px ) and ( max-width:410px ){
-    .play-btn {
-        bottom:40% !important;
+    .fp-bags {
+        top: 55% !important;
     }
 
-    #link_gamerule {
-        width:20% !important;
-        position: relative !important;
-        left: 38% !important;
-        -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,1127%) !important;
-    }
-
-    #link_prizelist {
-        width:20% !important;
-        position: relative !important;
-        left: 42% !important;
-        -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,1095%) !important;
-    }
 }
-
-@media  screen and ( min-width: 360px ) and ( max-width:374px ){
-    .play-btn {
-        bottom:47% !important;
-    }
-
-    #link_gamerule {
-        width:20% !important;
-        position: relative !important;
-        left: 38% !important;
-        -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,1082%) !important;
-    }
-
-    #link_prizelist {
-        width:20% !important;
-        position: relative !important;
-        left: 42% !important;
-        -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,1063%) !important;
-    }
-}
-
 @media  screen and ( min-width: 411px ) and ( max-width:479px ){
-    .play-btn {
-        bottom:47% !important;
+    .fp-bags {
+        top: 59% !important;
     }
 
-    #link_gamerule {
-        width:20% !important;
-        position: relative !important;
-        left: 38% !important;
-        -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,1059%) !important;
-    }
-
-    #link_prizelist {
-        width:20% !important;
-        position: relative !important;
-        left: 42% !important;
-        -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,1042%) !important;
-    }
 }
+/*@media  screen and ( min-width: 360px ) and ( max-width:374px ){*/
+    /*.play-btn {*/
+        /*bottom:47% !important;*/
+    /*}*/
+
+    /*#link_gamerule {*/
+        /*width:20% !important;*/
+        /*position: relative !important;*/
+        /*left: 38% !important;*/
+        /*-webkit-transform: translate(-50%,45%) !important;*/
+        /*transform: translate(-50%,1082%) !important;*/
+    /*}*/
+
+    /*#link_prizelist {*/
+        /*width:20% !important;*/
+        /*position: relative !important;*/
+        /*left: 42% !important;*/
+        /*-webkit-transform: translate(-50%,45%) !important;*/
+        /*transform: translate(-50%,1063%) !important;*/
+    /*}*/
+/*}*/
+
+/*@media  screen and ( min-width: 411px ) and ( max-width:479px ){*/
+    /*.play-btn {*/
+        /*bottom:47% !important;*/
+    /*}*/
+
+    /*#link_gamerule {*/
+        /*width:20% !important;*/
+        /*position: relative !important;*/
+        /*left: 38% !important;*/
+        /*-webkit-transform: translate(-50%,45%) !important;*/
+        /*transform: translate(-50%,1059%) !important;*/
+    /*}*/
+
+    /*#link_prizelist {*/
+        /*width:20% !important;*/
+        /*position: relative !important;*/
+        /*left: 42% !important;*/
+        /*-webkit-transform: translate(-50%,45%) !important;*/
+        /*transform: translate(-50%,1042%) !important;*/
+    /*}*/
+/*}*/
 
 h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
 :focus {outline:0;}
@@ -171,7 +182,9 @@ body {
     height: 100%;
     /*background: #ffd742;*/
 }
+#link-btn {
 
+}
 
 #link_gamerule {
     width:20% ;
@@ -193,11 +206,11 @@ body {
     position: relative;
     margin: 0;
     padding: 0;
-    background: url('../images/ep-bg-01.gif');
+    background: url('../images/ep-bg-01-new.gif');
     repeat: no-repeat;
     background-attachment:fixed;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01.gif', sizingMethod='scale');
-    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01.gif', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01-new.gif', sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01-new.gif', sizingMethod='scale');
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
@@ -207,13 +220,21 @@ body {
     position: absolute;
     background-image:url('../images/ep-button-01.png');
     background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: cover;
-    width: 54%;
+    background-size: contain;
     padding-bottom: 17.6%;
-    left: 50%;
-    bottom: 44%;
-    margin-left: -27%;
+    width: 54%;
+    left:25%;
+    bottom:46%;
+}
+
+.fp-bags {
+    position: absolute;
+    background-image:url('../images/fp-bags.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 95%;
+    height:95%;
+    top: 57%;
 }
 .voice{
     position: absolute;

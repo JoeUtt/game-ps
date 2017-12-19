@@ -125,7 +125,7 @@ $(document).ready(function(){
         audio:false,
         y:0,
         time:1,
-        totalTime: 45,
+        totalTime: 1,
         timeX:500,
         timeY:20,
         timer: null,
@@ -597,7 +597,7 @@ $(document).ready(function(){
         // eval("imgSC.src =  Game.images."+school.id+";");
         // Game.schoolName = school.name;
 
-        btn_end.style.display = "block";
+        btn_end.style.display = "inline";
 
         var points = point.toString().split('');
         for (var i = 0; i < points.length; i++) {

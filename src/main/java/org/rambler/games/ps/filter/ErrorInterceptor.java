@@ -59,9 +59,11 @@ public class ErrorInterceptor implements HandlerInterceptor {
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         if(response.getStatus()==404){
-            response.sendRedirect("/index.htm");
+            response.sendRedirect("/home");
         }else if(response.getStatus()==405){
-            response.sendRedirect("/index.htm");
+            response.sendRedirect("/home");
+        }else if(response.getStatus()==500){
+            response.sendRedirect("/home");
         }
     }
 

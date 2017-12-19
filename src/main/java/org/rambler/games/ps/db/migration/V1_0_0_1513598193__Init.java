@@ -14,8 +14,9 @@ public class V1_0_0_1513598193__Init implements SpringJdbcMigration {
                 "  `name` varchar(125) NOT NULL," +
                 "  `code` varchar(30) NOT NULL," +
                 "  `city` varchar(30) NOT NULL," +
-                "  `province` varchar(30) NOT NULL" +
-                ") ENGINE=MyISAM AUTO_INCREMENT=243 DEFAULT CHARSET=utf8;");
+                "  `province` varchar(30) NOT NULL," +
+                "   PRIMARY KEY (`id`)" +
+                ") ENGINE=InnoDB AUTO_INCREMENT=243 DEFAULT CHARSET=utf8;");
 
         jdbcTemplate.execute("INSERT INTO `shop` (`id`, `name`, `code`, `city`, `province`) VALUES" +
                 "(1, '北京金街购物中心MALL', 'E0009892', '北京市', '北京市')," +
@@ -261,33 +262,30 @@ public class V1_0_0_1513598193__Init implements SpringJdbcMigration {
                 "(241, 'EP嘉兴八佰伴', '', '嘉兴市', '浙江省')," +
                 "(242, '嘉兴雅斓名店', '', '嘉兴市', '浙江省');");
 
-        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS `lottery` (" +
+        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS `prize` (" +
                 "  `id` int(11) NOT NULL," +
                 "  `name` varchar(125) NOT NULL DEFAULT '' COMMENT '奖品名称'," +
                 "  `pic` varchar(125) NOT NULL COMMENT '奖品图片'," +
                 "  `count` int(11) NOT NULL COMMENT '奖品数量'," +
                 "  `lottery_count` int(11) NOT NULL COMMENT '已抽出数量'," +
-                "  `start` int(11) NOT NULL COMMENT '中奖概率'," +
-                "  `end` int(11) NOT NULL," +
-                "  `code` tinyint(2) NOT NULL COMMENT '奖品代码'," +
-                "  `is_del` tinyint(1) NOT NULL DEFAULT '0'," +
-                "  `money` smallint(6) NOT NULL" +
-                ") ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;");
+                "  `weight` int(11) NOT NULL COMMENT '中奖概率(权重)'," +
+                "  `code` varchar(20) NULL COMMENT '奖品代码'," +
+                "  `is_del` tinyint(1) NULL DEFAULT '0'," +
+                "   PRIMARY KEY (`id`)" +
+                ") ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;");
 
-        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS `award` (" +
-                "  `id` int(11) NOT NULL," +
-                "  `uid` int(11) NOT NULL," +
-                "  `result` tinyint(2) NOT NULL," +
-                "  `ip` varchar(15) NOT NULL," +
-                "  `add_time` datetime NOT NULL," +
-                "  `truename` varchar(30) NOT NULL," +
-                "  `mobile` varchar(30) NOT NULL," +
-                "  `address` varchar(255) NOT NULL," +
+        jdbcTemplate.execute("CREATE TABLE IF NOT EXISTS `lottery` (" +
+                "  `id` int(11) NOT NULL AUTO_INCREMENT," +
+                "  `oid` varchar(50) NOT NULL," +
+                "  `prize_id` int(11) NOT NULL," +
+                "  `add_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP," +
+                "  `truename` varchar(30) NULL," +
+                "  `mobile` varchar(30) NULL," +
+                "  `address` varchar(255) NULL," +
                 "  `is_get` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否领取'," +
-                "  `week` tinyint(1) NOT NULL COMMENT '当前周数'," +
-                "  `today` int(11) NOT NULL," +
-                "  `shop_id` smallint(6) NOT NULL," +
-                "  `code` varchar(125) NOT NULL" +
-                ") ENGINE=MyISAM AUTO_INCREMENT=15172 DEFAULT CHARSET=utf8;");
+                "  `shop_id` int(11) NULL," +
+                "  `code` varchar(125) NULL," +
+                "   PRIMARY KEY (`id`)" +
+                ") ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;");
     }
 }

@@ -3,7 +3,6 @@ package org.rambler.games.ps;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.qiniu.storage.UploadManager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -39,9 +38,4 @@ public class GamePsApplication {
 //	Auth auth(){
 //		return Auth.create(qiNiuProperties.getAccessKey(), qiNiuProperties.getSecretKey());
 //	}
-
-	@Bean
-	UploadManager uploadManager(){
-		return  new UploadManager();
-	}
 }

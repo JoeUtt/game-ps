@@ -30,17 +30,10 @@
       <div id="end"></div>
       <!--<img id="cry" src="/images/game/cry.png" style="display: none;" />-->
       <!--<img id="sc" />-->
-      <!--<a id="btn_restart"><img src="/images/game/winprize.png" /></a>-->
-      <!--<a id="btn_end"><img src="/images/game/playagain.png" /></a>-->
-
       <img id="btn_restart" src="/images/game/winprize.png" />
       <img id="btn_end"  src="/images/game/playagain.png" />
 
     </div>
-    <!--<div id="game_btn">-->
-      <!--<a id="btn_restart"><img src="/images/game/winprize.png" /></a>-->
-      <!--<a id="btn_end"><img src="/images/game/playagain.png" /></a>-->
-    <!--</div>-->
     <div id="items" style="display: none;">
 
     </div>
@@ -52,15 +45,6 @@
     <script th:src="@{/js/jquery.cookie.js}"></script>
     <script th:src="@{/js/game/hidpi-canvas.min.js}"></script>
     <script type="text/javascript" th:src="@{/js/config.js}"></script>
-    <script th:inline="javascript">
-      if(browser.isWeiXin()) {
-          var token = [[${token}]];
-          $.cookie("token", token);
-          if (!token) {
-              location.href = "/autho.htm";
-          }
-      }
-    </script>
     <script type="text/javascript" th:src="@{/js/game/common.js}"></script>
     <script type="text/javascript" th:src="@{/js/game/app.js}"></script>
   </body>
