@@ -3,84 +3,72 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 html{width:100%;margin:0 auto;font-size:16px;}
 html,button,input,select,textarea {font-family:'hiraginosansgb w3','Helvetica Neue',Helvetica,'microsoft yahei',Arial,sans-serif}
 body{min-width:320px; -webkit-text-size-adjust:100%;text-size-adjust:100%;margin:0 auto;background:#f0f0f0;/* background:#f3f3f3*/}
-@media screen and ( min-width: 360px ) and ( max-width:374px ){
-	html{font-size:16px;}    html{font-size:18px;}
-    .activity-main {
-        height:100% !important;
+@media  screen and ( min-width: 375px ) and ( max-width:410px ){
+    .play-btn {
+        bottom:40% !important;
     }
-    #link_area {
-        margin-top:-85% !important;
-    }
+
     #link_gamerule {
         width:20% !important;
         position: relative !important;
         left: 38% !important;
         -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,85%) !important;
+        transform: translate(-50%,1127%) !important;
     }
+
     #link_prizelist {
         width:20% !important;
         position: relative !important;
         left: 42% !important;
         -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,85%) !important;
+        transform: translate(-50%,1095%) !important;
     }
 }
-@media only screen and ( width: 375px ) and ( height:812px ){
-    html{font-size:18px;}
-    /*iphonex*/
-    body {background-color:#000 !important;
-        padding-top:88px !important;
-        padding-bottom:34px !important;
-        margin-right:0px !important;
-    }
-    img {
-        height:690px!important;
+
+@media  screen and ( min-width: 360px ) and ( max-width:374px ){
+    .play-btn {
+        bottom:47% !important;
     }
 
-
-    #link_area {
-        margin-top:-95% !important;
-    }
     #link_gamerule {
-        height:32px !important;
+        width:20% !important;
         position: relative !important;
         left: 38% !important;
         -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,115%) !important;
+        transform: translate(-50%,1082%) !important;
     }
+
     #link_prizelist {
-        height:32px !important;
+        width:20% !important;
         position: relative !important;
         left: 42% !important;
         -webkit-transform: translate(-50%,45%) !important;
-        transform: translate(-50%,115%) !important;
+        transform: translate(-50%,1063%) !important;
     }
 }
 
-@media screen and ( min-width: 375px ) and ( max-width:479px ){
-    html{font-size:18px;}
-    .activity-main {
-        height:100% !important;
+@media  screen and ( min-width: 411px ) and ( max-width:479px ){
+    .play-btn {
+        bottom:47% !important;
     }
-    #link_area {
-        margin-top:-85%;
-    }
+
     #link_gamerule {
-        width:20% ;
-        position: relative;
-        left: 38% ;
-        -webkit-transform: translate(-50%,45%);
-        transform: translate(-50%,85%);
+        width:20% !important;
+        position: relative !important;
+        left: 38% !important;
+        -webkit-transform: translate(-50%,45%) !important;
+        transform: translate(-50%,1059%) !important;
     }
+
     #link_prizelist {
-        width:20%;
-        position: relative;
-        left: 42%;
-        -webkit-transform: translate(-50%,45%);
-        transform: translate(-50%,85%);
+        width:20% !important;
+        position: relative !important;
+        left: 42% !important;
+        -webkit-transform: translate(-50%,45%) !important;
+        transform: translate(-50%,1042%) !important;
     }
 }
+
 h1,h2,h3,h4,h5,h6{font-weight:normal;font-size:100%;}
 :focus {outline:0;}
 a,input,select,textarea{-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
@@ -132,7 +120,7 @@ form{
 .posi-re{position:relative;}
 .posi-ab{position:absolute;}
 .yx-none{display:none;}
-  /*行数*/
+/*行数*/
 .line-num3{text-overflow: ellipsis; display: -webkit-box;  -webkit-box-orient: vertical; overflow : hidden;-webkit-line-clamp: 3;}
 .opacity{
     -webkit-animation: opacity 0.5s linear;
@@ -183,76 +171,71 @@ body {
     height: 100%;
     /*background: #ffd742;*/
 }
+
+
+#link_gamerule {
+    width:20% ;
+    position: relative;
+    left: 38% ;
+    -webkit-transform: translate(-50%,45%);
+    transform: translate(-50%,1022%);
+}
+
+#link_prizelist {
+    width:20%;
+    position: relative;
+    left: 42%;
+    -webkit-transform: translate(-50%,45%);
+    transform: translate(-50%,995%);
+}
+
 .activity-main{
     position: relative;
     margin: 0;
     padding: 0;
-    background: url('../images/ep-bg-01.png');
+    background: url('../images/ep-bg-01.gif');
     repeat: no-repeat;
     background-attachment:fixed;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01.png', sizingMethod='scale');
-    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01.png', sizingMethod='scale');
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01.gif', sizingMethod='scale');
+    -ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/ep-bg-01.gif', sizingMethod='scale');
     background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
 }
+
 .play-btn{
     position: absolute;
     background-image:url('../images/ep-button-01.png');
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: 50%;
     background-size: cover;
     width: 54%;
     padding-bottom: 17.6%;
     left: 50%;
-    bottom: 42.5%;
-    margin-left: -26%;
+    bottom: 44%;
+    margin-left: -27%;
 }
-
-.index-link1 {
-    position: absolute;
-    width: 54%;
-    padding-bottom: 17.6%;
-    left: 45%;
-    bottom: 30%;
-    margin-left: -13%;
-
-    font-size: 10px;
-    color: #fff;
-}
-.index-link2 {
-    position: absolute;
-    width: 54%;
-    padding-bottom: 17.6%;
-    left: 45%;
-    bottom: 30%;
-    margin-left: 13%;
-
-    font-size: 10px;
-    color: #fff;
-}
-
 .voice{
     position: absolute;
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position: 50%;
     background-size: contain;
-    width: 15%;
-    padding-bottom: 15%;
+    width: 10%;
+    padding-bottom: 10%;
     right: 3%;
-    /*top: 8%;*/
+    top: 8%;
     z-index: 9;
-    background-image:url('../images/game/sy-k.png');
+    background-image:url('../images/activity-voice-play.png');
 }
-.voice-play{
-    background-image:url('../images/game/sy-k.png');
+.voice-paly{
+    background-image:url('../images/activity-voice-play.png');
 }
 .voice-stop{
-    background-image:url('../images/game/sy-g.png');
+    background-image:url('../images/activity-voice-stop.png');
 }
 .zoom-animate{
-    /*-webkit-animation:zoomIcon 2s infinite linear ;*/
-    /*animation:zoomIcon 2s infinite linear ;*/
+    -webkit-animation:zoomIcon 2s infinite linear ;
+    animation:zoomIcon 2s infinite linear ;
 }
 @-webkit-keyframes zoomIcon {
     0% {
@@ -498,14 +481,14 @@ body {
     height: 100%;
 }
 .view{
-     position: absolute;
-     width: 54%;
-     left: 50%;
-     margin-left: -27%;
-     top: 33%;
-     overflow: hidden;
+    position: absolute;
+    width: 54%;
+    left: 50%;
+    margin-left: -27%;
+    top: 33%;
+    overflow: hidden;
     display: none;
- }
+}
 .view-bg{
     position: absolute;
     background-image: url(../images/view-bg-01.png);

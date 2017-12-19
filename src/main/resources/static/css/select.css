@@ -1,54 +1,29 @@
-@media only screen and ( width: 375px ) and ( height:812px ) {
-    .role-title {
-        top: 15% !important;
-    }
-
-    .role-name {
-        top:26.3% !important;
-    }
-
-    .role-xr {
-        margin-top: -10% !important;
-    }
-    .role-ml {
-        margin-top: -10% !important;
-    }
-    .role-xx {
-        margin-top: -10% !important;
-    }
-    .open-btn {
-        top:75% !important;
-    }
-}
-
 @media  screen and ( min-width: 375px ) and ( max-width:479px ) {
     .role-title {
-        top: 10%;
+        top: 10% !important;
     }
 
     .role-name {
-        top:24%;
+        top:25% !important;
     }
 
     .role-image {
-        margin-top:0;
+        margin-top:0 !important;
     }
 
     .role-xr {
-        margin-top: 0;
+        margin-top: 0 !important;
     }
     .role-ml {
-        margin-top: 0;
+        margin-top: 0 !important;
     }
     .role-xx {
-        margin-top: 0;
+        margin-top: 0 !important;
     }
     .open-btn {
-        top:80%;
+        top:80% !important;
     }
 }
-
-
 
 .activity-select{
     position: relative;

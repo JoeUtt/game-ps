@@ -13,20 +13,20 @@
       <script th:src="@{/js/jquery.cookie.js}"></script>
   </head>
   <body>
-  <img src="../images/ep-bg-01.gif" width="100%"/>
-
+  <!--<img src="../images/ep-bg-01.gif" width="100%"/>-->
+<div class="activity-main">
   <div class="voice voice-play rotate-animate yx-none" onclick="switchVoice(this)"></div>
   <audio id="activity-bg-audio" muted="true">
       <source src="../images/auto/hit.wav" type="audio/wav" />
   </audio>
-  <div class="play-btn zoom-animate" onclick="trunSelect()"></div>
-  <div id="link_area">
+  <div class="play-btn" onclick="trunSelect()"></div>
+
       <img id="link_gamerule" src="/images/gz.png" />
       <img id="link_prizelist"  src="/images/md.png" style="display: inline;"/>
-  </div>
+
   <!--<div class="index-link1"><span>游戏规则</span></div><div class="index-link2"><span>中奖名单</span></div>-->
   <form action="/select.htm" id="page" method="post"></form>
-
+</div>
   </body>
 <script th:inline="javascript">
     var voiceDom = document.getElementById("activity-bg-audio");
